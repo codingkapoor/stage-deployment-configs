@@ -1,0 +1,11 @@
+{
+    "service": {
+        "name": "web",
+        "port": 8080,
+	    "tags": ["mps1", "mps2"], 
+        "check": {
+            "http": "http://localhost:8080",
+            "interval": "10s"
+        }
+    }
+}
