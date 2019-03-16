@@ -1,4 +1,4 @@
-# staged-deployment-configs
+# stage-deployment-configs
 ```
 $ vagrant up
 $ vagrant status
