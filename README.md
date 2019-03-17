@@ -1,6 +1,6 @@
 # stage-deployment-configs
 
-This repository provides configurations to create the following deployment model in a stage/dev environment.
+Follow steps mentioned below to create the following deployment model in a stage/dev environment.
 
 ```
 node-a(service-a(customer-a,customer-b),
