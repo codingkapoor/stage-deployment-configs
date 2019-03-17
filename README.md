@@ -23,7 +23,7 @@ codingkapoor@omkara:$ vagrant up
 codingkapoor@omkara:$ vagrant status
 ```
 
-### SSH to `consul-server` virtual mahcine to start consul server.
+### 3. SSH to `consul-server` virtual mahcine to start consul server.
 ```
 codingkapoor@omkara:$ vagrant ssh consul-server
 vagrant@consul-server:$ ip=$(ifconfig eth1 | grep 'inet addr' | awk '{ print substr($2,6) }')
@@ -31,7 +31,7 @@ vagrant@consul-server:$ consul agent -dev -bind $ip \
                         -config-file /vagrant/consul-server/server.consul.json &
 ```
 
-### SSH to `node-a` virtual machine to start services and consul agent.
+### 4. SSH to `node-a` virtual machine to start services and consul agent.
 ```
 codingkapoor@omkara:$ vagrant ssh node-a
 vagrant@node-a:$ /vagrant/setup/service-a.setup.sh 
@@ -46,7 +46,7 @@ vagrant@node-a:$ consul agent -advertise $ip \
                   -config-file /vagrant/consul/node-a/service-d.consul.json &
 ```
 
-### SSH to `node-b` virtual machine to start services and consul agent.
+### 5. SSH to `node-b` virtual machine to start services and consul agent.
 ```
 codingkapoor@omkara:$ vagrant ssh node-b
 vagrant@node-b:$ /vagrant/setup/service-a.setup.sh 
@@ -59,7 +59,7 @@ vagrant@node-b:$ consul agent -advertise $ip \
                   -config-file /vagrant/consul/node-b/service-b.consul.json &
 ```
 
-### SSH to `node-c` virtual machine to start services and consul agent.
+### 6. SSH to `node-c` virtual machine to start services and consul agent.
 ```
 codingkapoor@omkara:$ vagrant ssh node-c
 vagrant@node-c:$ /vagrant/setup/service-c.setup.sh 
@@ -72,7 +72,7 @@ vagrant@node-c:$ consul agent -advertise $ip \
                   -config-file /vagrant/consul/node-c/service-e.consul.json &
 ```
 
-### SSH to `node-d` virtual machine to start services and consul agent.
+### 7. SSH to `node-d` virtual machine to start services and consul agent.
 ```
 codingkapoor@omkara:$ vagrant ssh node-d
 vagrant@node-d:$ /vagrant/setup/service-d.setup.sh 
@@ -83,7 +83,7 @@ vagrant@node-d:$ consul agent -advertise $ip \
                   -config-file /vagrant/consul/node-d/service-d.consul.json &
 ```
 
-### Start consul agent on your local machine.
+### 8. Start consul agent on your local machine.
 ```
 codingkapoor@omkara:$ consul agent -config-file desky.consul.json &
 ```
