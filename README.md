@@ -1,5 +1,17 @@
 # stage-deployment-configs
 
+### Deployment Model
+```
+node-a(service-a(customer-a,customer-b),
+		service-b(customer-b),
+		service-d(customer-c)),
+node-b(service-a(customer-b),
+		service-b(customer-a,customer-c)),
+node-c(service-c(customer-a),
+		service-e(customer-b,customer-c)),
+node-d(service-d(customer-a,customer-b,customer-c))
+```
+
 ### To create and configure virtual machines.
 ```
 codingkapoor@omkara:$ vagrant up
