@@ -13,7 +13,8 @@ node-c(service-c(customer-a),
 node-d(service-d(customer-a,customer-b,customer-c))
 ```
 
-Follow steps mentioned below to create aforementioned deployment model in a stage/dev environment.
+
+Follow steps mentioned below to create aforementioned deployment model in a stage/dev environment:
 
 ### 1. To create and configure virtual machines.
 ```
