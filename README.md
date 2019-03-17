@@ -1,6 +1,7 @@
 # stage-deployment-configs
 
-### Deployment Model
+This repository provides configurations to create the following deployment model in a stage/dev environment.
+
 ```
 node-a(service-a(customer-a,customer-b),
 		service-b(customer-b),
@@ -12,12 +13,12 @@ node-c(service-c(customer-a),
 node-d(service-d(customer-a,customer-b,customer-c))
 ```
 
-### To create and configure virtual machines.
+### 1. To create and configure virtual machines.
 ```
 codingkapoor@omkara:$ vagrant up
 ```
 
-### To check the status of virtual machines created via vagrant.
+### 2. To check the status of virtual machines created via vagrant.
 ```
 codingkapoor@omkara:$ vagrant status
 ```
