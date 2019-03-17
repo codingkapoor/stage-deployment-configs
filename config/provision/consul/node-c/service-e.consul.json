@@ -1,0 +1,11 @@
+{
+    "service": {
+        "name": "service-e",
+        "port": 8084,
+	    "tags": ["customer-b", "customer-c"], 
+        "check": {
+            "http": "http://localhost:8084",
+            "interval": "10s"
+        }
+    }
+}

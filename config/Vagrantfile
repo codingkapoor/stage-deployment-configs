@@ -7,10 +7,23 @@ Vagrant.configure("2") do |config|
     cs.vm.network "private_network", ip: "172.20.20.31"
   end
 
-  (1..3).each do |i|
-    config.vm.define "web#{i}" do |cs|
-      cs.vm.hostname = "web#{i}"
-      cs.vm.network "private_network", ip: "172.20.20.2#{i}"
-    end
+  config.vm.define "node-a" do |cs|
+    cs.vm.hostname = "node-a"
+    cs.vm.network "private_network", ip: "172.20.20.21"
+  end
+
+  config.vm.define "node-b" do |cs|
+    cs.vm.hostname = "node-b"
+    cs.vm.network "private_network", ip: "172.20.20.22"
+  end
+
+  config.vm.define "node-c" do |cs|
+    cs.vm.hostname = "node-c"
+    cs.vm.network "private_network", ip: "172.20.20.23"
+  end
+
+  config.vm.define "node-d" do |cs|
+    cs.vm.hostname = "node-d"
+    cs.vm.network "private_network", ip: "172.20.20.24"
   end
 end
