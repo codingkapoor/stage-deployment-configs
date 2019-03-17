@@ -1,6 +1,6 @@
 # stage-deployment-configs
 
-Follow steps mentioned below to create the following deployment model in a stage/dev environment.
+Vagrant based deployment configurations for project https://github.com/codingkapoor/dmv-consul-reactjs.
 
 ```
 node-a(service-a(customer-a,customer-b),
@@ -12,6 +12,8 @@ node-c(service-c(customer-a),
 		service-e(customer-b,customer-c)),
 node-d(service-d(customer-a,customer-b,customer-c))
 ```
+
+Follow steps mentioned below to create aforementioned deployment model in a stage/dev environment.
 
 ### 1. To create and configure virtual machines.
 ```
