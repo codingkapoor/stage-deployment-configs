@@ -25,7 +25,11 @@ vagrant@node-a:$ /vagrant/setup/service-b.setup.sh
 vagrant@node-a:$ /vagrant/setup/service-d.setup.sh 
 vagrant@node-a:$ docker ps
 vagrant@node-a:$ ip=$(ifconfig eth1 | grep 'inet addr' | awk '{ print substr($2,6) }')
-vagrant@node-a:$ consul agent -advertise $ip -config-file /vagrant/consul/common.consul.json -config-file /vagrant/consul/node-a/service-a.consul.json -config-file /vagrant/consul/node-a/service-b.consul.json -config-file /vagrant/consul/node-a/service-d.consul.json &
+vagrant@node-a:$ consul agent -advertise $ip \
+                  -config-file /vagrant/consul/common.consul.json \
+                  -config-file /vagrant/consul/node-a/service-a.consul.json \ 
+                  -config-file /vagrant/consul/node-a/service-b.consul.json \
+                  -config-file /vagrant/consul/node-a/service-d.consul.json &
 ```
 
 ### SSH to `node-b` virtual machine to start services and consul agent.
